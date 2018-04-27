@@ -27,6 +27,7 @@ module.exports.routes = {
   '/': {
     view: 'pages/homepage'
   },
+  'POST /api/v1/contacts/create': { action: 'contacts/create' }
 
   /***************************************************************************
   *                                                                          *
