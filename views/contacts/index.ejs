@@ -1,0 +1,29 @@
+<h1>Contacts</h1>
+
+<table>
+  <% contacts.forEach(function(contact){ %>
+    <tr>
+      <td><%= contact.name %></td>
+      <td><%= contact.email %></td>
+      <td><%= contact.phone %></td>
+      <td><%= contact.company %></td>
+      <td><%= contact.notes %></td>
+      <td><%= contact.twitter %></td>
+    </tr>
+  <% }); %>
+</table>
+<form action="/create" method="post">
+  <label for="name">Name</label>
+  <input id="contact-name" name="name" type="text">
+  <label for="email">Email</label>
+  <input id="contact-email" name="email" type="string">
+  <label for="phone">Phone</label>
+  <input id="contact-phone" name="phone" type="text">
+  <label for="company">Company</label>
+  <input id="contact-company" name="company" type="text">
+  <label for="notes">Notes</label>
+  <textarea id="contact-notes" name="notes" type="text"></textarea>
+  <label for="twitter">Twitter</label>
+  <input id="contact-twitter" name="twitter" type="text">
+  <input class="save-contact" type="submit" value="Save contact">
+</form>
